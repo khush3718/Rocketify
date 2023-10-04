@@ -25,4 +25,7 @@ class Rocket:
             print("Rocket is still on the launch pad. Initiate launch sequence to proceed.")
             return
         
-        
+        print(f"Stage {self.stage} complete.Seperating stage. Engaging next stage. {int(self.stage) + 1}.")
+        self.stage = str(int(self.stage) + 1)
+        self._fuel = 100
+        self.speed += 100
