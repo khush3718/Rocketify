@@ -77,3 +77,8 @@ class Simulator:
                     print("Invalid input. Use 'fast_forward S' where S is an integer.")
             else:
                 print("Invalid command. Please enter 'start_checks', 'launch', or 'fast_forward S.")
+
+
+if __name__ == "__main__":
+    simulator = Simulator()
+    simulator.run_simulator()
