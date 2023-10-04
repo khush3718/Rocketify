@@ -4,7 +4,7 @@ class Rocket:
         self.stage = "pre-launch"
         self._fuel = 100
         self._altitude = 0
-        self.speed = 0
+        self.speed = 100
 
 
     def update(self,seconds):
@@ -25,7 +25,7 @@ class Rocket:
             print("Rocket is still on the launch pad. Initiate launch sequence to proceed.")
             return
         
-        print(f"Stage {self.stage} complete.Seperating stage. Engaging next stage. {int(self.stage) + 1}.")
+        print(f"Stage {self.stage} complete.Seperating stage. Engaging next stage: {int(self.stage) + 1}")
         self.stage = str(int(self.stage) + 1)
         self._fuel = 100
         self.speed += 100
@@ -55,10 +55,10 @@ class Simulator:
         
         for _ in range(seconds):
             self.rocket.update(1)
-            if self.rocket._altitude >= 10000:
+            if self.rocket._altitude >= 5000:
                 print("Orbit achieved. Mission success!!")
                 break
-            elif self.rocket._altitude >= 5000:
+            elif self.rocket._altitude >= 1000:
                 self.rocket.stage_seperation()
                 break
 
