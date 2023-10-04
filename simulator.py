@@ -47,3 +47,33 @@ class Simulator:
             print("Launch sequence complete. Rocket is in flight.")
         else:
             print("Rocket is already in flight. Initiate stage seperation to proceed.")
+
+    def fast_forward(self,seconds):
+        if self.rocket.stage == "pre-launch":
+            print("Rocket is still on the launch pad. Initiate launch sequence to proceed.")
+            return
+        
+        for _ in range(seconds):
+            self.rocket.update(1)
+            if self.rocket._altitude >= 10000:
+                print("Orbit achieved. Mission success!!")
+                break
+            elif self.rocket._altitude >= 5000:
+                self.rocket.stage_seperation()
+                break
+
+    def run_simulator(self):
+        while True:
+            user = input("Enter command: ")
+            if user == "start_checks":
+                self.start_checks()
+            elif user == "launch":
+                self.launch_sequence()
+            elif user.startswith("fast_forward"):
+                try:
+                    seconds = int(user.split(" ")[1])
+                    self.fast_forward(seconds)
+                except ValueError:
+                    print("Invalid input. Use 'fast_forward S' where S is an integer.")
+            else:
+                print("Invalid command. Please enter 'start_checks', 'launch', or 'fast_forward S.")
