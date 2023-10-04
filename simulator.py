@@ -29,3 +29,21 @@ class Rocket:
         self.stage = str(int(self.stage) + 1)
         self._fuel = 100
         self.speed += 100
+
+class Simulator:
+    def __init__(self):
+        self.rocket = Rocket()
+
+    def start_checks(self):
+        if self.rocket.stage == "pre-launch":
+            print("All systems are ready. Initiate launch sequence to proceed.")
+        else:
+            print("Rocket is already in flight. Initiate stage seperation to proceed.")
+
+    def launch_sequence(self):
+        if self.rocket.stage == "pre-launch":
+            print("Initiating launch sequence.")
+            self.rocket.stage = "1"
+            print("Launch sequence complete. Rocket is in flight.")
+        else:
+            print("Rocket is already in flight. Initiate stage seperation to proceed.")
