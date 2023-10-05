@@ -1,5 +1,5 @@
 
-class Rocket:
+class Rocket:      # Rocket class. This is the class that will be used to create rocket objects.
     def __init__(self):
         self.stage = "pre-launch"
         self._fuel = 100
@@ -7,7 +7,7 @@ class Rocket:
         self.speed = 100
 
 
-    def update(self,seconds):
+    def update(self,seconds): # update method. This method will be used to update the rocket's altitude and fuel level.
         if self.stage == "pre-launch":
             print("Rocket is still on the launch pad. Initiate launch sequence to proceed.")
             return
@@ -20,7 +20,7 @@ class Rocket:
         self._fuel -= seconds # burn fuel
         print(f"Stage: {self.stage},Fuel: {self._fuel}%, Altitude: {self._altitude} km, Speed: {self.speed} km/hr")
 
-    def stage_seperation(self):
+    def stage_seperation(self): # stage_seperation method. This method will be used to seperate the rocket's stages.
         if self.stage == "pre-launch":
             print("Rocket is still on the launch pad. Initiate launch sequence to proceed.")
             return
@@ -30,17 +30,17 @@ class Rocket:
         self._fuel = 100
         self.speed += 100
 
-class Simulator:
+class Simulator: # Simulator class. This is the class that will be used to create simulator objects.
     def __init__(self):
         self.rocket = Rocket()
 
-    def start_checks(self):
+    def start_checks(self):     # start_checks method. This method will be used to start the checks.
         if self.rocket.stage == "pre-launch":
             print("All systems are ready. Initiate launch sequence to proceed.")
         else:
             print("Rocket is already in flight. Initiate stage seperation to proceed.")
 
-    def launch_sequence(self):
+    def launch_sequence(self): # launch_sequence method. This method will be used to initiate the launch sequence.
         if self.rocket.stage == "pre-launch":
             print("Initiating launch sequence.")
             self.rocket.stage = "1"
@@ -48,7 +48,7 @@ class Simulator:
         else:
             print("Rocket is already in flight. Initiate stage seperation to proceed.")
 
-    def fast_forward(self,seconds):
+    def fast_forward(self,seconds): # fast_forward method. This method will be used to fast forward the simulation.
         if self.rocket.stage == "pre-launch":
             print("Rocket is still on the launch pad. Initiate launch sequence to proceed.")
             return
@@ -62,7 +62,7 @@ class Simulator:
                 self.rocket.stage_seperation()
                 break
 
-    def run_simulator(self):
+    def run_simulator(self): # run_simulator method. This method will be used to run the simulator.
         while True:
             user = input("Enter command: ")
             if user == "start_checks":
