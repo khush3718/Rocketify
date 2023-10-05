@@ -22,3 +22,22 @@ The Initial state for rocket:
 * Stage Separation : "Stage 1 complete. Separating stage. Entering Stage 2."
 * Orbit Placement: "Orbit achieved! Mission Successful."
 * Mission Failure: "Rocket is out of fuel. Mission failed!!"
+
+## Demo/Screenshots 
+
+* To check if rocket is launched or not
+  
+![Screenshot 2023-10-05 102246](https://github.com/khush3718/Rocketify/assets/74204845/7010266a-9180-4828-8592-6bb069d2985d)
+
+* launch the rocket
+  
+![Screenshot 2023-10-05 102309](https://github.com/khush3718/Rocketify/assets/74204845/5862368a-efa2-4c61-b855-dd05310e9a3f)
+
+* fast forward the launch to when the stage seperation starts at altitude >= 1000km
+  
+![Screenshot 2023-10-05 102446](https://github.com/khush3718/Rocketify/assets/74204845/b67ced19-098a-4dd2-aaf1-bfb0dbd2c880)
+
+* Successfully reached the orbit after reaching altittude >= 5000km
+  
+![Screenshot 2023-10-05 102641](https://github.com/khush3718/Rocketify/assets/74204845/99fbf4fd-a345-4ee9-bf16-84f2e7a25772)
+
