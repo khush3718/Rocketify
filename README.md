@@ -23,6 +23,10 @@ The Initial state for rocket:
 * Orbit Placement: "Orbit achieved! Mission Successful."
 * Mission Failure: "Rocket is out of fuel. Mission failed!!"
 
+### How to run in your local machine
+
+* clone this repo and just run it in an environment having python installed
+
 ## Demo/Screenshots 
 
 * To check if rocket is launched or not
